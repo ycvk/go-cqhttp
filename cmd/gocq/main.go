@@ -12,8 +12,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Mrs4s/MiraiGo/binary"
-	"github.com/Mrs4s/MiraiGo/client"
+	"github.com/LagrangeDev/LagrangeGo/client"
+	"github.com/LagrangeDev/LagrangeGo/utils/binary"
 	para "github.com/fumiama/go-hide-param"
 	rotatelogs "github.com/lestrrat-go/file-rotatelogs"
 	"github.com/pkg/errors"
@@ -34,15 +34,6 @@ import (
 	"github.com/Mrs4s/go-cqhttp/modules/servers"
 	"github.com/Mrs4s/go-cqhttp/server"
 )
-
-// 允许通过配置文件设置的状态列表
-var allowStatus = [...]client.UserOnlineStatus{
-	client.StatusOnline, client.StatusAway, client.StatusInvisible, client.StatusBusy,
-	client.StatusListening, client.StatusConstellation, client.StatusWeather, client.StatusMeetSpring,
-	client.StatusTimi, client.StatusEatChicken, client.StatusLoving, client.StatusWangWang, client.StatusCookedRice,
-	client.StatusStudy, client.StatusStayUp, client.StatusPlayBall, client.StatusSignal, client.StatusStudyOnline,
-	client.StatusGaming, client.StatusVacationing, client.StatusWatchingTV, client.StatusFitness,
-}
 
 // InitBase 解析参数并检测
 //
@@ -426,7 +417,6 @@ func PasswordHashDecrypt(encryptedPasswordHash string, key []byte) ([]byte, erro
 
 func newClient() *client.QQClient {
 	c := client.NewClientEmpty()
-	c.UseFragmentMessage = base.ForceFragmented
 	c.OnServerUpdated(func(bot *client.QQClient, e *client.ServerUpdatedEvent) bool {
 		if !base.UseSSOAddress {
 			log.Infof("收到服务器地址更新通知, 根据配置文件已忽略.")
