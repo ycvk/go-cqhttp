@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/FloatTech/sqlite v1.6.3
-	github.com/LagrangeDev/LagrangeGo v0.0.0-20240416235247-b81d1b16fda6
+	github.com/LagrangeDev/LagrangeGo v0.0.0-20240417100118-966f6c6c0a52
 	github.com/Microsoft/go-winio v0.6.2-0.20230724192519-b29bbd58a65a
 	github.com/RomiChan/syncx v0.0.0-20221202055724-5f842c53020e
 	github.com/RomiChan/websocket v1.4.3-0.20220227141055-9b2c6168c9c5
@@ -22,7 +22,7 @@ require (
 	go.mongodb.org/mongo-driver v1.12.0
 	golang.org/x/crypto v0.11.0
 	golang.org/x/image v0.9.0
-	golang.org/x/sys v0.10.0
+	golang.org/x/sys v0.19.0
 	golang.org/x/term v0.10.0
 	golang.org/x/time v0.3.0
 	gopkg.ilharper.com/x/isatty v1.1.1
@@ -41,7 +41,7 @@ require (
 	github.com/klauspost/compress v1.13.6 // indirect
 	github.com/kr/pretty v0.3.1 // indirect
 	github.com/lestrrat-go/strftime v1.0.6 // indirect
-	github.com/mattn/go-isatty v0.0.16 // indirect
+	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/montanaflynn/stats v0.0.0-20171201202039-1bf9dbcd8cbe // indirect
 	github.com/pierrec/lz4/v4 v4.1.15 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
