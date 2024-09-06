@@ -1,0 +1,18 @@
+services:
+  cqhttp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/data
+    environment:
+      - TZ=Asia/Shanghai
+      - UID=99
+      - GID=100
+      - UMASK=002
+    ports:
+      - "8080:8080"  # 假设应用程序使用 8080 端口，请根据实际情况调整
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+    command: ["3"]  # 传递 "3" 作为参数给 docker-entrypoint.sh
